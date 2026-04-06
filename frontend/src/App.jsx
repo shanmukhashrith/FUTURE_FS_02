@@ -10,7 +10,7 @@ function App() {
 
   // 1. Fetch Data
   useEffect(() => {
-    fetch('http://localhost:5001/leads')
+    fetch('https://future-fs-02-4unb.onrender.com/leads')
       .then(response => response.json())
       .then(data => { setLeads(data); setLoading(false); })
       .catch(error => console.error("Error:", error));
@@ -19,7 +19,7 @@ function App() {
   // 2. Add Lead
   const handleAddLead = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5001/leads', {
+    const response = await fetch('https://future-fs-02-4unb.onrender.com/leads', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
@@ -32,7 +32,7 @@ function App() {
 
   // 3. Update Status
   const handleStatusChange = async (leadId, newStatus) => {
-    await fetch(`http://localhost:5001/leads/${leadId}`, {
+    await fetch(`https://future-fs-02-4unb.onrender.com/leads/${leadId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status: newStatus })
