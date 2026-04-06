@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
@@ -8,6 +9,7 @@ const app = express();
 // --- 1. MIDDLEWARE (The Translators) ---
 app.use(cors()); // Gives the frontend permission to connect
 app.use(express.json()); // Allows our server to understand JSON data
+app.use(cors());
 
 // --- 2. CONNECT TO DATABASE ---
 mongoose.connect(process.env.MONGO_URI)
