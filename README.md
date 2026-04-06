@@ -19,4 +19,11 @@ Features a React frontend, Node.js backend, and MongoDB cloud storage.
 2. In `/backend`, run `node server.js`.
 3. In `/frontend`, run `npm run dev`.
 
-🚀 Live Demo: [https://future-fs-02-eosin-kappa.vercel.app/](https://future-fs-02-eosin-kappa.vercel.app/)
+## Setup & Installation
+1. Clone the repository: `git clone https://github.com/shanmukhashrith/FUTURE_FS_02.git`
+2. Navigate to the backend folder and install dependencies: `cd backend && npm install`
+3. Start the backend server: `node server.js`
+4. In a new terminal, navigate to the frontend folder: `cd frontend && npm install`
+5. Start the Vite React app: `npm run dev`
+
+## 🚀 Live Demo: [https://future-fs-02-eosin-kappa.vercel.app/](https://future-fs-02-eosin-kappa.vercel.app/)
