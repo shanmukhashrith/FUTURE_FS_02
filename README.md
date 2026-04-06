@@ -18,3 +18,5 @@ Features a React frontend, Node.js backend, and MongoDB cloud storage.
 1. Clone the repo.
 2. In `/backend`, run `node server.js`.
 3. In `/frontend`, run `npm run dev`.
+
+🚀 Live Demo: [https://future-fs-02-eosin-kappa.vercel.app/](https://future-fs-02-eosin-kappa.vercel.app/)
