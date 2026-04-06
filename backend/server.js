@@ -54,6 +54,16 @@ app.post('/leads/:id/notes', async (req, res) => {
   await lead.save(); // Save the updated lead
   res.json(lead);
 });
+// --- DELETE A LEAD ---
+app.delete('/leads/:id', async (req, res) => {
+  try {
+    const deletedLead = await Lead.findByIdAndDelete(req.params.id);
+    if (!deletedLead) return res.status(404).json({ error: "Lead not found" });
+    res.json({ message: "Lead deleted successfully!" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete lead" });
+  }
+});
 
 // --- 5. START THE SERVER ---
 const PORT = process.env.PORT || 5000;
